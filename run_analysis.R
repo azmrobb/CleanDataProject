@@ -25,7 +25,7 @@ testSubject <- testSubject %>%
   # add id columns to easily join
   mutate(id = rownames(testSubject))
 
-# read the activity Names and set column names
+# read the mapping of activity numbers to names
 activityNames <- read.table("activity_labels.txt", sep = "", col.names = c("activitynumber", "activity"))
 
 # read the training and test activity numbers for each observation
@@ -47,7 +47,6 @@ testActivity <- testActivity %>%
   mutate(id = rownames(testActivity)) %>%
   # select only the columns to keep before joining
   select(matches("id|activity"))
-
 
 # read in the feature names
 features <- read.table("features.txt", sep = " ")
