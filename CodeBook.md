@@ -25,7 +25,7 @@ x_train.txt   | ~/train   | trainMeasure    | 561 columns of numbers representin
 subjects_test.txt   | ~/test    | testSubject   | 1 column of integers representing the subject for each test observation   
 y_test.txt    | ~/test    | testActivity    | 1 column of integers representing the activity for each test observation  
 x_test.txt  | ~/test  | testMeasure   | 561 columns of numbers representing measurments for each test observation  
-activity_labels.txt   | ~   | activityNames   | 2 column mapping activity numbers to names   
+activity_labels.txt   | ~   | activityNames   | 2 column mapping of activity numbers in first column to names in second column   
 features.txt  | ~   | features  | 1 column of 561 names of measurements   
 
 _Notes_   
@@ -38,9 +38,9 @@ The _Cleandata.R_ script does the following, but not necessarily in the order li
 
 1. Reads each file listed above into the variables listed above 
 2. Adds an activity column containing the activity name to each row of the activityTrain and activityTest data frames 
-3. Cleans the measurement names listed in features to only include alpha numeric character in lower case characters 
-4. Adds the cleaned feature names as column heading in trainMeasure and testMeasure data frames 
-5. Removes columns from the Measure data frames that are not mean or standard deviations 
+3. Cleans the measurement names listed in features to only include alpha numeric characters in lower case characters 
+4. Adds the cleaned feature names as column headings in the trainMeasure and testMeasure data frames 
+5. Removes columns from the Measure data frames that are not related to mean or standard deviation 
 6. Assigns ids to the subject, activity, and measure data sets so they can be easily joined. 
 7. Joins the subject, activty, and measure data for training and test observations to form two data frames: one for training and one for test 
 8. Unions together the training and test data into a single data frame called allData 
@@ -51,8 +51,8 @@ The following data frames are created as a result of this processing:
 
 Data Frame  | Description
 ---   | ---   
-trainData   | combined measurements, activity, and subject for each training observation With clean column headings and an activity column containing the activity name   
-testData  | combined measurements, activity, and subject for each test observation With clean column heading  and an activity column contain the activity name  
+trainData   | combined measurements, activity, and subject for each training observation with clean column headings and an activity column containing the activity name   
+testData  | combined measurements, activity, and subject for each test observation with clean column heading  and an activity column containing the activity name  
 allData   | Union of trainData and testData excluding columns used to join subjects, activites, and measurements  
 groupedData | Average all measurements in allData grouped by activity and subject   
 
