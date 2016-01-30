@@ -51,8 +51,8 @@ The following data frames are created as a result of this processing:
 
 Data Frame  | Description
 ---   | ---   
-trainData   | combined measurements, activity, and subject for each training observation with clean column headings and an activity column containing the activity name   
-testData  | combined measurements, activity, and subject for each test observation with clean column heading  and an activity column containing the activity name  
+trainData   | combined subject, activity, and measurement for each training observation with clean column headings and an activity column containing the activity name   
+testData  | combined subject, activity, and measurement for each test observation with clean column heading  and an activity column containing the activity name  
 allData   | Union of trainData and testData excluding columns used to join subjects, activites, and measurements  
 groupedData | Average all measurements in allData grouped by activity and subject   
 

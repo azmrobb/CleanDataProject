@@ -70,12 +70,12 @@ img {
 
 <div id="overview" class="section level3">
 <h3>Overview</h3>
-<p>This file describes how the <em>CleanData.R</em> script works.<br />The script was wirtten as part of an assignment for the Coursera &amp; John Hopkins data science course named <strong>Getting and Cleaning Data</strong></p>
+<p>This file describes how the <em>run_analysis.R</em> script works.<br />The script was wirtten as part of an assignment for the Coursera &amp; John Hopkins data science course named <strong>Getting and Cleaning Data</strong></p>
 <p>It reads several files related to an experiment and combines them together into a single tidy data set and then summarizes the data. The combined data set and summary are written to files.</p>
 </div>
 <div id="input" class="section level3">
 <h3>Input</h3>
-<p>The <em>CleanData.R</em> script reads the following files into the following variables. The script script assumes the files are located as iisted below (~ = current working directory). The data in these files that were collected for two types of observations (training and test)</p>
+<p>The <em>run_analysis.R</em> script reads the following files into the following variables. The script script assumes the files are located as iisted below (~ = current working directory). The data in these files that were collected for two types of observations (training and test)</p>
 <table>
 <thead>
 <tr class="header">
@@ -140,7 +140,7 @@ img {
 </div>
 <div id="processing" class="section level3">
 <h3>Processing</h3>
-<p>The <em>Cleandata.R</em> script does the following, but not necessarily in the order listed</p>
+<p>The <em>run_analysis.R</em> script does the following, but not necessarily in the order listed</p>
 <ol style="list-style-type: decimal">
 <li>Reads each file listed above into the variables listed above</li>
 <li>Adds an activity column containing the activity name to each row of the activityTrain and activityTest data frames</li>
@@ -164,11 +164,11 @@ img {
 <tbody>
 <tr class="odd">
 <td align="left">trainData</td>
-<td align="left">combined measurements, activity, and subject for each training observation with clean column headings and an activity column containing the activity name</td>
+<td align="left">combined subject, activity, and measurement for each training observation with clean column headings and an activity column containing the activity name</td>
 </tr>
 <tr class="even">
 <td align="left">testData</td>
-<td align="left">combined measurements, activity, and subject for each test observation with clean column heading and an activity column contain the activity name</td>
+<td align="left">combined subject, activity, and measurement for each test observation with clean column heading and an activity column containing the activity name</td>
 </tr>
 <tr class="odd">
 <td align="left">allData</td>
@@ -183,7 +183,7 @@ img {
 </div>
 <div id="output" class="section level3">
 <h3>Output</h3>
-<p>This <em>CleanData.R</em> script writes the follwing space separated text files to the present working directory (~).</p>
+<p>This <em>run_analysis.R</em> script writes the follwing space separated text files to the present working directory (~).</p>
 <table>
 <thead>
 <tr class="header">

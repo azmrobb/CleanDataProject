@@ -6,7 +6,7 @@ The project contains the following files.
 
 File  | Description   
 ---   | ---   
-run_analysis.R   | The R script for cleaning the data It reads several files related to an experiment and combines them together into a single tidy data set and then summarizes the data.  The combined data set and summary are written to files   
+run_analysis.R   | The R script for cleaning the data. It reads several files related to an experiment and combines them together into a single tidy data set and then summarizes the data.  The combined data set and summary are written to files   
 CodeBook.md   | Documentation describing how the script works including inputs, processing, and outputs.  It describes the variables, data, and any transformations or work performed to clean up the data  
 
 ###Usage
