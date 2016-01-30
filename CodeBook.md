@@ -6,14 +6,14 @@ output: html_document
 ---
 
 ### Overview
-This file describes how the _CleanData.R_ script works.  
+This file describes how the _run_analysis.R_ script works.  
 The script was wirtten as part of an assignment for the Coursera & John Hopkins data science course named **Getting and Cleaning Data**
 
 It reads several files related to an experiment and combines them together into a single tidy
 data set and then summarizes the data.  The combined data set and summary are written to files.
 
 ### Input
-The _CleanData.R_ script reads the following files into the following variables.
+The _run_analysis.R_ script reads the following files into the following variables.
 The script script assumes the files are located as iisted below (~ = current working directory).
 The data in these files that were collected for two types of observations (training and test)
 
@@ -34,7 +34,7 @@ _Notes_
  
 
 ### Processing
-The _Cleandata.R_ script does the following, but not necessarily in the order listed
+The _run_analysis.R_ script does the following, but not necessarily in the order listed
 
 1. Reads each file listed above into the variables listed above 
 2. Adds an activity column containing the activity name to each row of the activityTrain and activityTest data frames 
@@ -57,7 +57,7 @@ allData   | Union of trainData and testData excluding columns used to join subje
 groupedData | Average all measurements in allData grouped by activity and subject   
 
 ### Output  
-This _CleanData.R_ script writes the follwing space separated text files to the present working directory (~).
+This _run_analysis.R_ script writes the follwing space separated text files to the present working directory (~).
  
 File  | Location  | Description   
 ---   | ---   | ---
