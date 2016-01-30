@@ -90,5 +90,5 @@ allData <- rbind(select(trainData,-id, -activitynumber), select(testData,-id, -a
 groupedData <- allData %>% group_by(activity, subject) %>% summarise_each(funs(mean))
 
 # write the results to files
-write.csv(allData,"allData.csv", row.names = FALSE)
-write.csv(groupedData,"groupedData.csv", row.names = FALSE)
+write.table(allData,"allData.txt", row.names = FALSE)
+write.table(groupedData,"groupedData.txt", row.names = FALSE)

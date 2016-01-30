@@ -14,4 +14,4 @@ Follow the steps to use the _CleanData.R_ script
 1.  Download the input file into your working directory from the [Link](
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)   
 2.  Use the source comand to run the _CleanData.R_ script   
-3.  View the results in the output files _allData.csv_ and _groupData.csv_ located in the working directory   
+3.  View the results in the output files _allData.txt_ and _groupData.txt_ located in the working directory   

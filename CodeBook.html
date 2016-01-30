@@ -90,13 +90,13 @@ img {
 <td align="left">subjects_train.txt</td>
 <td align="left">~/train</td>
 <td align="left">trainSubject</td>
-<td align="left">1 column integers representing subject for each training observation</td>
+<td align="left">1 column of integers representing the subject for each training observation</td>
 </tr>
 <tr class="even">
 <td align="left">y_train.txt</td>
 <td align="left">~/train</td>
 <td align="left">trainActivity</td>
-<td align="left">1 column integers representing activity for each training observation</td>
+<td align="left">1 column of integers representing the activity for each training observation</td>
 </tr>
 <tr class="odd">
 <td align="left">x_train.txt</td>
@@ -108,13 +108,13 @@ img {
 <td align="left">subjects_test.txt</td>
 <td align="left">~/test</td>
 <td align="left">testSubject</td>
-<td align="left">1 column of integers representing subject for each test observation</td>
+<td align="left">1 column of integers representing the subject for each test observation</td>
 </tr>
 <tr class="odd">
 <td align="left">y_test.txt</td>
 <td align="left">~/test</td>
 <td align="left">testActivity</td>
-<td align="left">1 column of integers representing activity for each test observation</td>
+<td align="left">1 column of integers representing the activity for each test observation</td>
 </tr>
 <tr class="even">
 <td align="left">x_test.txt</td>
@@ -136,23 +136,24 @@ img {
 </tr>
 </tbody>
 </table>
-<p><em>Notes</em><br /> * There are no column headings in the files<br /> * The original source of the files is <a href="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip">Link</a></p>
+<p><em>Notes</em><br /> * There are no column headings in the files<br /> * The original source of the files is: <a href="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip">Link</a></p>
 </div>
 <div id="processing" class="section level3">
 <h3>Processing</h3>
-<p>The <em>Cleandata.R</em> script does the following, but necessarily in the order listed</p>
+<p>The <em>Cleandata.R</em> script does the following, but not necessarily in the order listed</p>
 <ol style="list-style-type: decimal">
-<li>Reads each of the file listed above into the variables listed above</li>
-<li>Adds an activity column containing the activity name to each row of the activityTrain and activity test data frames</li>
-<li>Adds cleans up the measurement names listed in features to only include alpha numeric character in lower case characters</li>
-<li>Adds the cleaned up feature names as column heading trainMeasure and testmeasure</li>
-<li>Removes columns the measure data sets that are not mean or standard deviations</li>
+<li>Reads each file listed above into the variables listed above</li>
+<li>Adds an activity column containing the activity name to each row of the activityTrain and activityTest data frames</li>
+<li>Cleans the measurement names listed in features to only include alpha numeric character in lower case characters</li>
+<li>Adds the cleaned feature names as column heading in trainMeasure and testMeasure data frames</li>
+<li>Removes columns from the Measure data frames that are not mean or standard deviations</li>
 <li>Assigns ids to the subject, activity, and measure data sets so they can be easily joined.</li>
 <li>Joins the subject, activty, and measure data for training and test observations to form two data frames: one for training and one for test</li>
-<li>Unions together the training and test data into a single data called allData</li>
-<li>Creates a summarized data frame called groupedData showing the mean of each measure grouped by activity and subject</li>
+<li>Unions together the training and test data into a single data frame called allData</li>
+<li>Creates a summarized data frame called groupedData showing the mean of each measure grouped by activity and subject<br /></li>
+<li>Write the results to text files</li>
 </ol>
-<p>The follwog data frames are created as a result of this processing:</p>
+<p>The following data frames are created as a result of this processing:</p>
 <table>
 <thead>
 <tr class="header">
@@ -163,11 +164,11 @@ img {
 <tbody>
 <tr class="odd">
 <td align="left">trainData</td>
-<td align="left">combined measurements, activity, and subject for each training observation With clean column headings and activity column contain activity name</td>
+<td align="left">combined measurements, activity, and subject for each training observation With clean column headings and an activity column containing the activity name</td>
 </tr>
 <tr class="even">
 <td align="left">testData</td>
-<td align="left">combined measurements, activity, and subject for each test observation With clean column heading and activity column contain activity names</td>
+<td align="left">combined measurements, activity, and subject for each test observation With clean column heading and an activity column contain the activity names</td>
 </tr>
 <tr class="odd">
 <td align="left">allData</td>
@@ -182,7 +183,7 @@ img {
 </div>
 <div id="output" class="section level3">
 <h3>Output</h3>
-<p>This script the follwing comma separated value files to the present working directory (~).</p>
+<p>This <em>CleanData.R</em> script writes the follwing space separated text files to the present working directory (~).</p>
 <table>
 <thead>
 <tr class="header">
@@ -193,12 +194,12 @@ img {
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">allData.csv</td>
+<td align="left">allData.txt</td>
 <td align="left">~</td>
 <td align="left">Data from allData including column headings. The subject, activity, mean, and standard deviation measurements for every observation.</td>
 </tr>
 <tr class="even">
-<td align="left">groupData.csv</td>
+<td align="left">groupData.txt</td>
 <td align="left">~</td>
 <td align="left">Data from groupedData including column headings. The average of each measurment in allData grouped by activity and subject.</td>
 </tr>
