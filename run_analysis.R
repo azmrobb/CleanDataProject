@@ -1,4 +1,4 @@
-# SCRIPT: cleanData.R
+# SCRIPT: run_analysis.R
 #
 # OVERVIEW:
 # This script was written as an assignment for the Coursera & John Hopkins data science course named
